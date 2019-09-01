@@ -3,6 +3,7 @@
 
 import sys
 import getopt
+from data_process.processor import process
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
@@ -28,3 +29,4 @@ if __name__ == '__main__':
 
     print('file_type:%s' % file_type)
     print('input_file:%s' % input_file)
+    process(input_file, file_type)
