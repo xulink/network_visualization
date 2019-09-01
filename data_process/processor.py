@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
+import sys
+sys.path.append('../')
 
 import csv
 import json
@@ -25,8 +27,6 @@ def _save_send(send):
     with open('../data/send.json', 'w') as wf:
         wf.write(json_str)
     wf.close()
-
-
 
 def process(input_file='../data/20180630_anomalous_suspicious.csv', file_type='csv'):
 
