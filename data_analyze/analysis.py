@@ -13,7 +13,24 @@ class Analyzer:
         self.dir = [[10, -10, 0, 0], [0, 0, 10, -10], [0, 0, 0, 0]]
 
     def sort(self):
-        pass
+        self.point.point_data = sorted(self.point.point_data, key = lambda x:x[1])
+		num=0
+		self.point.point_data[0][5]=num
+		length=len(self.point.point_data)
+		for i in range(1,length):
+			mark=0
+			if self.point.point_data[i][1][1]=='.':
+				mark=2
+			elif self.point.point_data[i][1][2]=='.':
+				mark=3
+			elif self.point.point_data[i][1][3]=='.':
+				mark=4
+			s=self.point.point_data[i][1][:mark]
+			if self.point.point_data[i-1][1][:mark]==s :
+				self.point.point_data[i][5]=num
+			elif :
+			    num+=1
+				self.point.point_data[i][5]=num
 
     def cal_center_point(self):
         sum_x, sum_y, sum_z = 0, 0, 0
